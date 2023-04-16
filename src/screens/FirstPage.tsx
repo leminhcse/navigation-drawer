@@ -7,7 +7,7 @@ const FirstPage = ({ navigation }) => {
             <View style={{ flex: 1, padding: 16}}>
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center',}}>
                     <Text style={{ fontSize: 25, textAlign: 'center', marginBottom: 16}}>
-                        This is the first page under First page option
+                        Hi Minh, This is the first page under First page option
                     </Text>
                     <Button onPress={ () => navigation.navigate('SecondPage')} title="Go to Second Page"/>
                     <Button onPress={ () => navigation.navigate('ThirdPage')} title="Go to Third Page"/>

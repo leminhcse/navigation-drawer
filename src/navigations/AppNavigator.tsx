@@ -31,36 +31,34 @@ const FirstScreenStack = () => {
         <Stack.Screen
           name="SecondPage"
           component={SecondPage}/>
-        {/* <Stack.Screen
-          name="ThirdPage"
-          component={ThirdPage}/> */}
       </Stack.Navigator>
+    );
+  }
+
+  function DrawerStack() {
+    return(
+        <Drawer.Navigator screenOptions={{drawerStyle: { 
+            backgroundColor: '$c6cbef', width: 250,}, 
+            headerStyle: { 
+                backgroundColor: '#f4511e',},
+            headerTintColor: '#fff',
+            headerTitleStyle: { 
+                fontWeight: 'bold',}
+            }}>
+            <Drawer.Screen name="FirstPage" options={{drawerLabel: 'First page option', title: 'First Stack'
+            }} component={FirstScreenStack}/>
+    
+            <Drawer.Screen name="SecondPage" options={{drawerLabel: 'Second page option', title: 'Second Stack'
+            }} component={SecondScreenStack}/>
+    
+        </Drawer.Navigator>
     );
   }
 
 export default function AppContainer() {
     return(
-        // <Text>Minh dep trai</Text>
         <NavigationContainer>
-            <Drawer.Navigator screenOptions={{drawerStyle: {
-                backgroundColor: '$c6cbef',
-                width: 250,
-            }, headerStyle: {
-                backgroundColor: '#f4511e',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-                fontWeight: 'bold',
-            }
-            }}>
-                <Drawer.Screen name="FirstPage" options={{drawerLabel: 'First page option', title: 'First Stack'
-            }} component={FirstScreenStack}/>
-
-                <Drawer.Screen name="SecondPage" options={{drawerLabel: 'Second page option', title: 'Second Stack'
-            }} component={SecondScreenStack}/>
-
-
-            </Drawer.Navigator>
+            <DrawerStack/>
         </NavigationContainer>
     );
 }
